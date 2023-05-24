@@ -74,6 +74,9 @@ class TestPub(unittest.TestCase):
 		self.assertEqual(self.james.wallet, 95)
 		self.assertEqual(self.james.drunkenness, 3)
 	
+	def test_stock_value(self):
+		self.assertEqual(self.pub.stock_value(), 287)
+	
 	
 		
 	

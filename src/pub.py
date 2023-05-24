@@ -25,6 +25,12 @@ class Pub:
 					return True
 		return False
 	
+	def stock_value(self):
+		value = 0
+		for item in self.stock.keys():
+			value += (item.price * self.stock[item])
+		return value
+	
 	def sell_drink(self, customer, drink):
 		if self.in_stock(drink):
 			if self.is_of_age(customer):
